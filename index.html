@@ -14,11 +14,11 @@
     </style>
 </head>
 
-<body class="wrap">
-    <input></input>
-    <header>head</header>
-    <footer>footer</footer>
-    <img src="image/person.png" alt=""transform:rotate(90deg)>
+<body>
+<div>
+    <p>index</p>
+
+</div>
 </body>
 <script type="text/javascript" src="./script/api.js"></script>
 <script type="text/javascript">
@@ -27,17 +27,16 @@ apiready = function() {
                 name: 'main',
                 url: 'html/main.html',
                 bounces: true,
-                rect: { // 推荐使用Margin布局，用于适配屏幕的动态变化
-                        marginTop: headerH, // main页面距离win顶部的高度
-                        marginBottom: footerH, // main页面距离win底部的高度
-                        w: 'auto' // main页面的宽度 自适应屏幕宽度
-                }；
-        })；
+                rect: {
+                        // 推荐使用Margin布局，用于适配屏幕的动态变化
+                        w: 'auto', // main页面的宽度 自适应屏幕宽度
+                        h:  'auto'
+                }
+        });
         api.setScreenOrientation({
                 orientation: 'landscape_left'
         });
-    }
-
+};
 </script>
 
 </html>
