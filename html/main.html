@@ -14,19 +14,39 @@
         .person{
                 transform: scale(0.5);
                 float: left;
-                 
         }
-        .role{
-                float: left;
+        .role_1{
                 margin-top: 20px;
+                position:absolute;
+                top:120px;
+                left:-150px;
         }
+        .conversation{
+          position:absolute;
+          top:320px;
+          left:290px;
+          width: 600px;
+          height: 150px;
+          background: pink;
+          border-radius: 5px;
+          /* 圆角 */
+          margin: 0px auto 0;
+          margin-right: 30px;
+          text-indent: 6px;
+          line-height: 35px;
+      }
     </style>
 </head>
 
 <body>
         <p>mian页面</p>
-        <div class="bg_p"><img src="../image/p_path.jpg" alt=""></div>
-        <div class="role_1"><img class="person"src="../image/person.png" alt=""></div>
+        <div class="bg_p">
+          <img src="../image/p_path.jpg" alt="">
+        </div>
+        <div class="role_1">
+          <img class="person"src="../image/person.png" alt="">
+        </div>
+        <div class="conversation"></div>
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
