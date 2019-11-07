@@ -17,29 +17,40 @@
         }
         .role_1{
                 margin-top: 20px;
-                position:absolute;
-                top:120px;
-                left:-150px;
+                float: left;
         }
         .conversation{
-          position:absolute;
-          top:320px;
-          left:290px;
-          width: 600px;
-          height: 150px;
-          background: pink;
+          position: absolute;
+          left:160px;
+          top: 205px;
+          width: 500px;
+          height: 120px;
+          background:rgba(51,255,255,.5);
           border-radius: 5px;
           /* 圆角 */
-          margin: 0px auto 0;
-          margin-right: 30px;
           text-indent: 6px;
           line-height: 35px;
+      }
+      .bg_p img{
+        position:absolute;
+        left:0px;
+        top:0px;
+        z-index:-1;
+        width:100%!important;
+        height:100%!important;
+        width:expression(this.width > 150 ? "150px" : this.width)!important;
+      }
+      .role_1 img{
+        float: left;
+        margin-left: -130px;
+        margin-top: 0px;
+        width:100%!important;
+        height:150%!important;
       }
     </style>
 </head>
 
 <body>
-        <p>mian页面</p>
         <div class="bg_p">
           <img src="../image/p_path.jpg" alt="">
         </div>
