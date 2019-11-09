@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>start</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+        .bg_p{
+                margin-top: 100px;
+        }
+        .person{
+                transform: scale(0.5);
+                float: right;
+        }
+        .button_1{
+          position: absolute;
+          left:80px;
+          top: 20px;
+      }
+      .button_2{
+        position: absolute;
+        left:80px;
+        top: 120px;
+    }
+    .button_3{
+      position: absolute;
+      left:80px;
+      top: 220px;
+  }
+      .bg_p img{
+        position:absolute;
+        left:0px;
+        top:0px;
+        width:100%;
+        height:100%;
+        width:expression(this.width > 150 ? "150px" : this.width)!important;
+      }
+    </style>
+</head>
+
+
+<body>
+        <p>start页面</p>
+        <div class="bg_p">
+          <img src="../image/123.jpg" alt="">
+        </div>
+        <img class="person" src="../image/456.jpg" alt="">
+        <button class="button_1" type="button" style="height:80px;width:100px;color:black; background-color:red">开始游戏</button>
+        <button class="button_2" type="button" style="height:80px;width:100px;color:blue; background-color:green">继续游戏</button>
+        <button class="button_3" type="button" style="height:80px;width:100px;color:red; background-color:black">设置</button>
+</body>
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>main</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+        .bg_p{
+                margin-top: 100px;
+        }
+        .person{
+                transform: scale(0.5);
+                float: right;
+        }
+        .button_1{
+          position: absolute;
+          left:80px;
+          top: 20px;
+      }
+      .button_2{
+        position: absolute;
+        left:80px;
+        top: 120px;
+    }
+    .button_3{
+      position: absolute;
+      left:80px;
+      top: 220px;
+  }
+      .bg_p img{
+        position:absolute;
+        left:0px;
+        top:0px;
+        width:100%;
+        height:100%;
+        width:expression(this.width > 150 ? "150px" : this.width)!important;
+      }
+    </style>
+</head>
+
+
+<body>
+        <div class="bg_p">
+          <img src="../image/123.jpg" alt=""
+        </div>
+        <img class="person" src="../image/456.jpg" alt="">
+        <button class="button_1" type="button" style="height:80px;width:100px;color:black; background-color:red">开始游戏</button>
+        <button class="button_2" type="button" style="height:80px;width:100px;color:blue; background-color:green">继续游戏</button>
+        <button class="button_3" type="button" style="height:80px;width:100px;color:red; background-color:black">设置</button>
+</body>
+
+
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        api.setScreenOrientation({
+            orientation: 'landscape_left'
+        });
+    };
+    var mo=function(e){e.preventDefault();};
+        function stop(){
+                document.body.style.overflow='hidden';
+                document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+        }//直接默认不让滑动
+        stop();
+
+
+// /***取消滑动限制***/
+// function move(){
+//         document.body.style.overflow='';//出现滚动条
+//         document.removeEventListener("touchmove",mo,{passive:false});
+// }
+</script>
+
+</html>
+
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        api.setScreenOrientation({
+            orientation: 'landscape_left'
+        });
+    };
+    var mo=function(e){e.preventDefault();};
+        function stop(){
+                document.body.style.overflow='hidden';
+                document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+        }//直接默认不让滑动
+        stop();
+
+
+// /***取消滑动限制***/
+// function move(){
+//         document.body.style.overflow='';//出现滚动条
+//         document.removeEventListener("touchmove",mo,{passive:false});
+// }
+</script>
+
+</html>
