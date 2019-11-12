@@ -101,9 +101,9 @@
           <img src="../image/123.jpg" alt=""
         </div>
         <img class="person" src="../image/456.jpg" alt="">
-        <button class="button_1" type="button" style="height:80px;width:100px;color:black; background-color:red">开始游戏</button>
-        <button class="button_2" type="button" style="height:80px;width:100px;color:blue; background-color:green">继续游戏</button>
-        <button class="button_3" type="button" style="height:80px;width:100px;color:red; background-color:black">设置</button>
+        <button id = "begin" class="button_1" type="button" style="height:80px;width:100px;color:black; background-color:red">开始游戏</button>
+        <button id = "continue" class="button_2" type="button" style="height:80px;width:100px;color:blue; background-color:green">继续游戏</button>
+        <button id = "setting" class="button_3" type="button" style="height:80px;width:100px;color:red; background-color:black">设置</button>
 </body>
 
 
@@ -132,11 +132,19 @@
 </html>
 
 <script type="text/javascript" src="../script/api.js"></script>
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+<script>
+        $('#begin').click(function () {
+                window.open('main.html')
+            })
+</script>
+</script>
 <script type="text/javascript">
     apiready = function() {
         api.setScreenOrientation({
             orientation: 'landscape_left'
         });
+
     };
     var mo=function(e){e.preventDefault();};
         function stop(){
@@ -151,6 +159,9 @@
 //         document.body.style.overflow='';//出现滚动条
 //         document.removeEventListener("touchmove",mo,{passive:false});
 // }
+</script>
+<script>
+
 </script>
 
 </html>

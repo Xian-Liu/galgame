@@ -11,14 +11,23 @@
     body {
             height: 100%;
     }
+    .index img{
+      position:absolute;
+      left:0px;
+      top:0px;
+      z-index:-1;
+      width:100%!important;
+      height:100%!important;
+      width:expression(this.width > 150 ? "150px" : this.width)!important;
+    }
     </style>
 </head>
 
 <body>
-<div>
-        <img src="image/start.jpg" alt="">
-        <p id="sp"></p>
+<div class = "index">
+        <img  src="image/start.jpg" alt="">
 </div>
+<p id="sp"></p>
 </body>
 <script type="text/javascript" src="./script/api.js"></script>
 
@@ -26,7 +35,7 @@
 onload=function(){
     setInterval(go, 1000);
 };
-var x=2; //利用了全局变量来执行
+var x=3; //利用了全局变量来执行
 function go(){
     if(x>0){
         document.getElementById("sp").innerHTML=x; //每次设置的x的值都不一样了。
