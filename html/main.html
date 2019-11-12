@@ -7,6 +7,9 @@
     <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
     <title>main</title>
     <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         .bg_p{
                 margin-top: 0px;
@@ -58,6 +61,7 @@
           <img class="person"src="../image/person.png" alt="">
         </div>
         <div class="conversation">
+                <div class=""
                 <div class="content">
                         <div class="next"><a herf = "#"><b>>>下一页</b></a></div>
                 </div>
@@ -84,8 +88,16 @@
 //         document.removeEventListener("touchmove",mo,{passive:false});
 // }</script>
 <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
-<script>
-        // var content = window.opener.document.getElementById("begin").innerHTML;
-        // alert(content);
-</script>
+<!-- <script>
+var db;
+var request = window.indexdDB.open("MyTestDatabase");
+//打开数据库
+db.error = function(event){
+        alert("Database error:" + event.target.errorCode);
+}
+request.onsucces = function(event){
+        db = event.target.result;
+};
+
+</script> -->
 </html>

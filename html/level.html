@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+
+.bg_p img{
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:-1;
+  width:100%!important;
+  height:100%!important;
+  width:expression(this.width > 150 ? "150px" : this.width)!important;
+}
+.apDiv2 {
+	position:absolute;
+	width:440px;
+	height:335px;
+	z-index:2;
+	left: 154px;
+	top: 17px;
+}
+
+</style>
+</head>
+
+<body>
+<div class = "bg_p" >
+  <img src="../image/p_leafs.jpg"/>
+</div>
+<div class="apDiv2">
+  <form>
+    <label>
+    <input type="button" name="button" id="button1" value="关卡1" style="height:80px;width:100px;"/>
+    </label>
+    <label>
+    <input type="button" name="button2" id="button2" value="关卡2" style="height:80px;width:100px;"/>
+    </label>
+    <label>
+    <input type="button" name="button3" id="button3" value="关卡3" style="height:80px;width:100px;"/>
+    </label>
+    <p>
+      <label>
+      <input type="button" name="button4" id="button4" value="关卡4" style="height:80px;width:100px;"/>
+      </label>
+      <label>
+      <input type="button" name="button5" id="button5" value="关卡5" style="height:80px;width:100px;"/>
+      </label>
+      <label>
+      <input type="button" name="button9" id="button9" value="返回" style="height:80px;width:100px;"/>
+      </label>
+    </p>
+  </form>
+</div>
+</body>
+<script>
+apiready = function() {
+    api.setScreenOrientation({
+        orientation: 'landscape_left'
+    });
+};
+var mo=function(e){e.preventDefault();};
+    function stop(){
+            document.body.style.overflow='hidden';
+            document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+    }//直接默认不让滑动
+    stop();
+</script>
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+<script>
+        $('#button9').click(function () { 
+                window.open('start.html')
+        })
+        $('#button1').click(function () {
+                window.open('main.html')
+        })
+</script>
+</html>
