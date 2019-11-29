@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>main</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .bg_p{
+                margin-top: 0px;
+        }
+        .person{
+                transform: scale(0.5);
+                float: left;
+        }
+        .role_1{
+                margin-top: 20px;
+                float: left;
+        }
+        .conversation{
+          position: absolute;
+          left:160px;
+          top: 205px;
+          width: 500px;
+          height: 120px;
+          background:rgba(51,255,255,.5);
+          border-radius: 5px;
+          /* 圆角 */
+          text-indent: 6px;
+          line-height: 35px;
+      }
+      .bg_p img{
+        position:absolute;
+        left:0px;
+        top:0px;
+        z-index:-1;
+        width:100%!important;
+        height:100%!important;
+        width:expression(this.width > 150 ? "150px" : this.width)!important;
+      }
+      .role_1 img{
+        float: left;
+        margin-left: -130px;
+        margin-top: 0px;
+        width:100%!important;
+        height:150%!important;
+      }
+      #next{
+      }
+    </style>
+</head>
+<body>
+        <div class="bg_p">
+        <!-- 背景 -->
+          <img src="../image/p_bed.jpg" alt="">
+        </div>
+        <div class="role_1">
+          <img class="person"src="../image/person/old.jpg" alt="">
+          <form>
+                  <label>
+                          <input type="button" name="button" id="back" value="返回" style="height:80px;width:100px;color:white;float:left;"/>
+                  </label>
+          </form>
+        </div>
+        <div class="conversation">
+                        <div class="content">
+                                <p id = "text" class="text"></p>
+                                <div id="next"><a herf = "#" style = "margin-top:80px;margin-left:10px"><b>>>下一页</b></a></div>
+                        </div>
+        </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        api.setScreenOrientation({
+            orientation: 'landscape_left'
+        });
+    };
+    var mo=function(e){e.preventDefault();};
+        function stop(){
+                document.body.style.overflow='hidden';
+                document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+        }//直接默认不让滑动
+        stop();
+
+
+// /***取消滑动限制***/
+// function move(){
+//         document.body.style.overflow='';//出现滚动条
+//         document.removeEventListener("touchmove",mo,{passive:false});
+// }</script>
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+<!-- <script>
+var db;
+var request = window.indexdDB.open("MyTestDatabase");
+//打开数据库
+db.error = function(event){
+        alert("Database error:" + event.target.errorCode);
+}
+request.onsucces = function(event){
+        db = event.target.result;
+};
+
+
+</script> -->
+<script>
+$('.text').on('click', function () {
+        var id = $(this).attr('id');
+        var list = $('.text')
+        for (var i = 0; i < list.length; i++) {
+            var d = list[i];
+            if (d.id == id) {
+                $(d).addClass('selected').html( id + '的统计数据为');
+            } else {
+                $(d).removeClass('selected').html('点击查看' + d.id + '的统计数据');
+            }
+        }
+    });
+$('#back').click(function () {
+        window.open('start.html')
+})//跳转到mian页面
+</script>
+<script>
+
+
+</script>
+</html>
