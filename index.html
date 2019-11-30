@@ -11,29 +11,52 @@
     body {
             height: 100%;
     }
+    .index img{
+      position:absolute;
+      left:0px;
+      top:0px;
+      z-index:-1;
+      width:100%!important;
+      height:100%!important;
+      width:expression(this.width > 150 ? "150px" : this.width)!important;
+    }
     </style>
 </head>
 
 <body>
-<div>
-    <p>index</p>
-    <- NOTHING ->
-
+<div class = "index">
+        <img  src="image/start.jpg" alt="">
 </div>
+<div hidden><p id="sp"></p></div>
 </body>
 <script type="text/javascript" src="./script/api.js"></script>
+
+<script language=javascript>
+onload=function(){
+    setInterval(go, 1000);
+};
+var x=3; //利用了全局变量来执行
+function go(){
+    if(x>0){
+        document.getElementById("sp").innerHTML=x; //每次设置的x的值都不一样了。
+        x--;
+    }else{
+        location.href='html/start.html';
+    }
+}
+</script>
 <script type="text/javascript">
 apiready = function() {
-        api.openFrame({
-                name: 'main',
-                url: 'html/main.html',
-                bounces: true,
-                rect: {
-                        // 推荐使用Margin布局，用于适配屏幕的动态变化
-                        w: 'auto', // main页面的宽度 自适应屏幕宽度
-                        h:  'auto'
-                }
-        });
+        // api.openFrame({
+        //         name: 'start',
+        //         url: 'html/start.html',
+        //         bounces: true,
+        //         rect: {
+        //                 // 推荐使用Margin布局，用于适配屏幕的动态变化
+        //                 w: 'auto', // main页面的宽度 自适应屏幕宽度
+        //                 h:  'auto'
+        //         }
+        // });
         api.setScreenOrientation({
                 orientation: 'landscape_left'
         });
