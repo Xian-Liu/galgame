@@ -59,6 +59,7 @@
 
                 /* #next {} */
         </style>
+
 </head>
 
 <body>
@@ -67,13 +68,13 @@
                 <img src="../image/p_path.jpg" alt="">
         </div>
         <div class="role_1">
-                <img class="person" src="../image/person/women_Y.jpg" alt="">
-                <form>
-                        <label>
-                                <input type="button" name="button" id="back" value="返回"
-                                        style="height:80px;width:100px;color:white;float:left;" />
-                        </label>
-                </form>
+          <img class="person"src="../image/person/women_Y.jpg" alt="">
+          <form>
+                  <label class="return">
+                          <input type="button" name="button" id="back" value="返回" 
+                                style="height:80px;width:100px;color:white;float:left;"/>
+                  </label>
+          </form>
         </div>
         <div class="conversation">
                 <div class="content">
@@ -93,7 +94,7 @@
         function stop() {
                 document.body.style.overflow = 'hidden';
                 document.addEventListener("touchmove", mo, { passive: false });//禁止页面滑动
-        }//直接默认不让滑动
+        }//直接默认不滑动
         stop();
 
 </script>
