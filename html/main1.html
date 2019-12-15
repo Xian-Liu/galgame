@@ -8,9 +8,7 @@
         <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
         <title>main</title>
         <link rel="stylesheet" type="text/css" href="../css/api.css" />
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
         <style>
                 .bg_p {
                         margin-top: 0px;
@@ -68,62 +66,50 @@
                 <img src="../image/p_path.jpg" alt="">
         </div>
         <div class="role_1">
-          <img class="person"src="../image/person/women_Y.jpg" alt="">
-          <form>
-                  <label class="return">
-                          <input type="button" name="button" id="back" value="返回"
-                                style="height:80px;width:100px;color:white;float:left;"/>
-                  </label>
-          </form>
+                <img class="person" src="../image/person/women_Y.jpg" alt="">
+                <form>
+                        <label class="return">
+                                <input type="button" name="button" id="back" value="返回"
+                                        style="height:80px;width:100px;color:white;float:left;" />
+                        </label>
+                </form>
         </div>
         <div class="conversation">
                 <div class="content">
                         <p id="text" class="text">一天晚上，</p>
                         <div id="next"><a herf="#" style="margin-top:80px;margin-left:10px"><b>>>下一页</b></a></div>
-                        <div id = fenzhi1></div>
-                        <div id = fenzhi2></div>
+                        <div id=fenzhi1></div>
+                        <div id=fenzhi2></div>
                 </div>
         </div>
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+        <script>
+                console.log(window.$)
+                window.jQuery = window.$
+        </script>
+        <script type="text/javascript" src="../script/api.js"></script>
+        <script type="text/javascript">
+                apiready = function () {
+                        api.setScreenOrientation({
+                                orientation: 'landscape_left'
+                        });
+                };
+                var mo = function (e) { e.preventDefault(); };
+                function stop() {
+                        document.body.style.overflow = 'hidden';
+                        document.addEventListener("touchmove", mo, { passive: false });//禁止页面滑动
+                }//直接默认不滑动
+                stop();
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script>
+                $('#back').click(function () {
+                        window.open('start.html')
+                })//跳转到mian页面
+        </script>
+        <script src="../script/main.js" defer></script>
 </body>
-<script type="text/javascript" src="../script/api.js"></script>
-<script type="text/javascript">
-        apiready = function () {
-                api.setScreenOrientation({
-                        orientation: 'landscape_left'
-                });
-        };
-        var mo = function (e) { e.preventDefault(); };
-        function stop() {
-                document.body.style.overflow = 'hidden';
-                document.addEventListener("touchmove", mo, { passive: false });//禁止页面滑动
-        }//直接默认不滑动
-        stop();
-
-</script>
-<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
-<script src="../script/main.js">
-
-// 设置 id、内容、下一条id、对话立绘
-// a.id = "1";
-// a.content = "first content";
-// a.nextId = "2";
-// a.picture = "../image/person/kid_B"
-// //创建一个 Map
-// let fristMap = new Map(); 
-// // 添加键 值
-//  firstMap.set(1,"a")
-//  // 将get方法赋值给read, 这样就可以得到各个属性
-//  const read = firstMap.get();
-// //read.content
-</script>
-<script>
-        $('#back').click(function () {
-                window.open('start.html')
-        })//跳转到mian页面
-</script>
-<script>
-
-
-</script>
-
 </html>

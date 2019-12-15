@@ -79,3 +79,7 @@ td,th {
 .loading_more:after {
 	content: '加载更多';	
 }
+
+.branch {
+	width: 80%
+}
